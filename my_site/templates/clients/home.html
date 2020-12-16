@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="landing-threshold"
+     style="background-image: url(&quot;{% static 'clients/img/clint-adair-BW0vK-FA3eg-unsplash.jpg' %}&quot;);">
+    <div class="container-fluid" style="margin-top: 46px;height: auto;min-height: auto;padding: 10px;">
+        <div class="landing-intro">
+            <h1 class="text-capitalize shadow d-flex"
+                style="font-family: 'Fredoka One', cursive;font-size: 8vh;color: #8cccd3;width: auto;">Where websites
+                turn into sales engines</h1>
+            <p class="lead" style="font-family: 'Fredoka One', cursive;font-size: 1.5em;">Digital Solutions for
+                Marketing and Web Development</p>
+            <form class="container-flex" method="post">
+                <div class="form-group">
+                    <input class="form-control" style="size: 5vw; opacity: 0.7;" placeholder="email" type="email" id="myEmail" required>
+                </div>
+                <a class="text-capitalize bg-dark border rounded border-white shadow-lg btn" type="submit"
+                   data-bs-hover-animate="pulse" href="#" id="btn1" onclick="haveweb()"
+                   style="color: white;padding-right: 50px;padding-left: 50px;font-family: 'Fredoka One';margin-right: 50px; font-size: 5 .rem;margin-bottom: 10px; marker-end: 50px;">
+                    I have a website
+                </a>
+                <a class="text-capitalize border rounded border-white shadow-lg btn" type="submit"
+                   data-bs-hover-animate="pulse" href="#" id="btn2" onclick="noweb()"
+                   style="color: black;padding-right: 50px; background-color: #8cccd3; padding-left: 50px;font-family: 'Fredoka One', cursive;font-size: 5 .rem;margin-bottom: 10px;">
+                    I dont have a website
+                </a>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+<blockquote class="quote-card">
+
+    <p>Websites promote you 24/7: No employee will do that
+    </p>
+
+    <cite>Paul Cookson</cite></blockquote>
+<div class="features-blue">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center" style="color: #000000;font-family: 'Fredoka One', cursive;font-size: 45px;">
+                Features</h2>
+            <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat,
+                pellentesque ut laoreet vitae. </p>
+        </div>
+        <div class="row features">
+            <div class="col-sm-6 col-md-4 item"><i class="fa fa-map-marker icon"></i>
+                <h3 class="name">Works everywhere</h3>
+                <p class="description">Create a website and gain visibility anywhere in the world.&nbsp;</p>
+            </div>
+            <div class="col-sm-6 col-md-4 item"><i class="fa fa-clock-o icon"></i>
+                <h3 class="name">Always available</h3>
+                <p class="description">Website is your online sales man that ensures your business is available to
+                    customers&nbsp;</p>
+            </div>
+            <div class="col-sm-6 col-md-4 item"><i class="fa fa-list-alt icon"></i>
+                <h3 class="name">Customizable</h3>
+                <p class="description">Our websites change according to your needs and in case you have something that
+                    needs to be changed, it is done free of charge to your convinience</p>
+            </div>
+            <div class="col-sm-6 col-md-4 item"><i class="fa fa-leaf icon"></i>
+                <h3 class="name">Organic</h3>
+                <p class="description">Best sites are those that gain traffic without any advertising.At</p>
+            </div>
+            <div class="col-sm-6 col-md-4 item"><i class="material-icons icon">airplanemode_active</i>
+                <h3 class="name">Fast</h3>
+                <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent
+                    aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+            </div>
+            <div class="col-sm-6 col-md-4 item"><i class="fa fa-mobile-phone icon"></i>
+                <h3 class="name">Mobile-first</h3>
+                <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent
+                    aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron border rounded shadow-lg"
+     style="height: auto;padding-top: -4px;background-color: #8cccd3;padding-bottom: 5px;">
+    <h1 style="color: #000000;font-family: 'Fredoka One', cursive;">ALREADY HAVE A WEBSITE?</h1>
+    <p style="color: #000000;font-family: 'Fredoka One', cursive;">Learn how you can increase traffic to your website
+        and potentially increase sales</p>
+    <p><a class="btn btn-primary border-white" role="button"
+          style="color: #000000;font-family: 'Fredoka One', cursive;">Learn more</a></p>
+</div>
+<section class="wrapper-numbers">
+    <div class="container">
+        <div class="row countup text-center">
+            <div class="col-md-8 offset-md-2 header-numbers">
+                <h1 style="color: #000000;font-family: 'Fredoka One', cursive;">Web of Numbers</h1>
+                <p>Quid capesseret et fluminis attonitus ritu resistente quid itaque supercilia vetabantur multis
+                    suspendere resistente pontem. </p>
+            </div>
+            <div class="col-sm-6 col-md-3 col-md-4">
+                <p><i class="icon ion-ios-world" aria-hidden="true"></i></p>
+                <p><span class="count finished" style="visibility: visible;">2543</span></p>
+                <h2>global websites</h2>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 column">
+                <p><i class="material-icons" aria-hidden="true">business_center</i></p>
+                <p><span class="count replay" style="visibility: visible;">328</span></p>
+                <h2>business websites</h2>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 column">
+                <p><i class="material-icons" aria-hidden="true">trending_up</i></p>
+                <p><span class="count finished" style="visibility: visible;">95.60</span><span class="sup">% </span></p>
+                <h2>increase in sales</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="jumbotron border rounded shadow-lg"
+     style="height: auto;padding-top: -4px;background-color: #8cccd3;padding-bottom: 5px;">
+    <h1 style="color: #000000;font-family: 'Fredoka One', cursive;">DON'T HAVE A WEBSITE?</h1>
+    <p style="color: #000000;font-family: 'Fredoka One', cursive;">Get your website up and running in a week and watch
+        your business tap into new horizons</p>
+    <p><a class="btn btn-primary border-white" role="button"
+          style="color: #000000;font-family: 'Fredoka One', cursive;">Make One For Me</a></p>
+</div>
+<div class="contact-clean" style="height: auto;">
+    <form method="post" style="background: linear-gradient(135deg, rgb(140,204,211), #008789);">
+        <h2 class="text-center" style="color: #000000;font-family: 'Fredoka One', cursive;">Contact us</h2>
+        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>
+        <div class="form-group"><input class="form-control is-invalid" type="email" name="email"
+                                       placeholder="Email"><small class="form-text text-danger">Please enter a correct
+            email address.</small></div>
+        <div class="form-group"><label>Service</label><select class="form-control" id="service">
+            <option value="12" selected="">Web development</option>
+            <option value="13">Marketing</option>
+            <option value="14">Consultation</option>
+        </select></div>
+        <div class="form-group"><textarea class="form-control" name="message" placeholder="Message"
+                                          rows="14"></textarea></div>
+        <div class="form-group">
+            <button class="btn btn-outline-light" style="background-color: #8cccd3;color: #ffffff;" type="submit">send
+            </button>
+        </div>
+
+    </form>
+</div>
+
+{% endblock content %}
