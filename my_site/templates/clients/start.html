@@ -2,17 +2,106 @@
 {% load static %}
 {% block content %}
 
-<div class="contact-clean">
+<div class="contact-clean" id="step1">
     <form method="post">
-        <h2 class="text-center">Contact us</h2>
-        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>
-        <div class="form-group"><input class="form-control is-invalid" type="email" name="email"
-                                       placeholder="Email"><small class="form-text text-danger">Please enter a correct
-            email address.</small></div>
-        <div class="form-group"><textarea class="form-control" name="message" placeholder="Message"
-                                          rows="14"></textarea></div>
+        {% csrf_token %}
+        <h2 class="text-center">Step 1 of 3</h2>
+        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Business Name" id="biz"
+                                       required></div>
         <div class="form-group">
-            <button class="btn btn-primary" type="submit">send</button>
+            <label>Industry</label>
+            <input type="text" id="industry" class="form-control" placeholder="eg beauty" required>
+        </div>
+        <div class="form-group">
+            <label>Business stage</label>
+            <select id="stage" class="form-control">
+                <option>starting</option>
+                <option>achieving sales</option>
+                <option selected>expansion</option>
+            </select>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="ads"/>
+            <label class="form-check-label" for="ads"
+            >Used Paid Ads Before</label
+            >
+        </div>
+        <div class="form-group">
+            <label>Which marketing channels have you used so far?</label>
+            <textarea id="channels" class="form-control" name="message" placeholder="facebook, twitter,word of mouth"
+                      rows="14"></textarea></div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit" onclick="sendOne()">Next</button>
+        </div>
+    </form>
+</div>
+
+<div class="contact-clean" id="step2" style="display:none">
+    <form method="post">
+        {% csrf_token %}
+        <h2 class="text-center">Step 2 of 3</h2>
+        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Domain Name"
+                                       id="domain"
+                                       required></div>
+        <div class="form-group">
+            <label>Domain status</label>
+            <select id="status" class="form-control">
+                <option>dormant</option>
+                <option>achieving sales</option>
+                <option selected>active no sales</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit" onclick="sendTwo()">Next</button>
+        </div>
+    </form>
+</div>
+
+<div class="contact-clean" id="step3" style="display:none">
+    <form method="post">
+        {% csrf_token %}
+        <h2 class="text-center">Step 3 of 3</h2>
+
+        <h1 class="text-center">I am looking to increase my
+            <div class="form-group">
+                <select id="type" class="form-control">
+                    <option>web traffic</option>
+                    <option>subscriptions</option>
+                    <option selected>sales</option>
+                </select>
+            </div>
+            by
+            <div class="form-group"><input class="form-control" type="number" placeholder="20" id="target"
+                                           required>%
+            </div>
+            in the next
+            <div class="form-group"><input class="form-control" type="number" placeholder="2" id="duration"
+                                           required>
+            </div>
+
+            <div class="form-group">
+                <select id="duration_type" class="form-control">
+                    <option>month(s)</option>
+                    <option>week(s)</option>
+                    <option selected>year(s)</option>
+                </select>
+            </div>
+            starting in the next
+            <div class="form-group"><input class="form-control" type="number" placeholder="2" id="start"
+                                           required>
+            </div>
+            <div class="form-group">
+
+                <select id="start_type" class="form-control">
+                    <option>month(s)</option>
+                    <option>week(s)</option>
+                    <option selected>year(s)</option>
+                </select>
+            </div>
+
+        </h1>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit" onclick="sendThree()">Finish</button>
         </div>
     </form>
 </div>

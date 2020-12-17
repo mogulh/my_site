@@ -5,7 +5,7 @@ from django.db import models
 types = [
     ('web development', 'web development'),
     ('marketing', 'marketing'),
-    ('all', 'all'),
+    ('consultation', 'consultation'),
 ]
 
 duration_type = [
@@ -35,9 +35,10 @@ class Business(models.Model):
         ('achieving sales', 'achieving sales'),
         ('expansion', 'expansion'),
     ]
-    client = models.ForeignKey(User, on_delete=models.CASCADE)
+    client = models.ForeignKey(User, on_delete=models.CASCADE, related_name='business')
     email = models.EmailField()
     business_name = models.CharField(max_length=200, blank=True, null=True)
+    industry = models.CharField(max_length=200, blank=True, null=True)
     stage = models.CharField(max_length=100, choices=status, default='starting')
     paid_ads = models.BooleanField(default=False)
     marketing_channels = models.CharField(max_length=200, blank=True, null=True)

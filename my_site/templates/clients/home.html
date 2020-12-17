@@ -13,7 +13,8 @@
                 Marketing and Web Development</p>
             <form class="container-flex" method="post">
                 <div class="form-group">
-                    <input class="form-control" style="size: 5vw; opacity: 0.7;" placeholder="email" type="email" id="myEmail" required>
+                    <input class="form-control" style="size: 5vw; opacity: 0.7;" placeholder="email" type="email"
+                           id="myEmail" required>
                 </div>
                 <a class="text-capitalize bg-dark border rounded border-white shadow-lg btn" type="submit"
                    data-bs-hover-animate="pulse" href="#" id="btn1" onclick="haveweb()"
@@ -95,7 +96,7 @@
             </div>
             <div class="col-sm-6 col-md-3 col-md-4">
                 <p><i class="icon ion-ios-world" aria-hidden="true"></i></p>
-                <p><span class="count finished" style="visibility: visible;">2543</span></p>
+                <p><span class="count replay" style="visibility: visible;">2543</span></p>
                 <h2>global websites</h2>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 column">
@@ -105,7 +106,7 @@
             </div>
             <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 column">
                 <p><i class="material-icons" aria-hidden="true">trending_up</i></p>
-                <p><span class="count finished" style="visibility: visible;">95.60</span><span class="sup">% </span></p>
+                <p><span class="count replay" style="visibility: visible;">60.60</span><span class="sup">% </span></p>
                 <h2>increase in sales</h2>
             </div>
         </div>
@@ -121,20 +122,22 @@
 </div>
 <div class="contact-clean" style="height: auto;">
     <form method="post" style="background: linear-gradient(135deg, rgb(140,204,211), #008789);">
+        {% csrf_token %}
         <h2 class="text-center" style="color: #000000;font-family: 'Fredoka One', cursive;">Contact us</h2>
-        <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>
-        <div class="form-group"><input class="form-control is-invalid" type="email" name="email"
+        <div class="form-group"><input class="form-control" type="text" id="name" name="name" placeholder="Name"></div>
+        <div class="form-group"><input class="form-control is-invalid" id="enqEmail" type="email" name="email"
                                        placeholder="Email"><small class="form-text text-danger">Please enter a correct
             email address.</small></div>
         <div class="form-group"><label>Service</label><select class="form-control" id="service">
-            <option value="12" selected="">Web development</option>
-            <option value="13">Marketing</option>
-            <option value="14">Consultation</option>
+            <option selected>web development</option>
+            <option>marketing</option>
+            <option>consultation</option>
         </select></div>
-        <div class="form-group"><textarea class="form-control" name="message" placeholder="Message"
+        <div class="form-group"><textarea class="form-control" id="message" name="message" placeholder="Message"
                                           rows="14"></textarea></div>
         <div class="form-group">
-            <button class="btn btn-outline-light" style="background-color: #8cccd3;color: #ffffff;" type="submit">send
+            <button class="btn btn-outline-light" style="background-color: #8cccd3; color: #ffffff;" type="button"
+                    onclick="submitMessage()">send
             </button>
         </div>
 
