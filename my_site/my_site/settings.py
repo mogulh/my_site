@@ -25,7 +25,7 @@ SECRET_KEY = '+m^bk(*7l+dkxt^922$tvfh@sa9t^q_r51z#w8vwqs(_kb)!3l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mogulh.co.ke']
 
 
 # Application definition
@@ -77,8 +77,14 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mogulh',
+        'USER': 'admin',
+        'PASSWORD': 'admin3501',
+        'HOST': 'localhost',
+        'PORT': '',
+        
+
     }
 }
 
@@ -120,6 +126,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+STATIC_ROOT = (BASE_DIR/ 'static')

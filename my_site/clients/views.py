@@ -26,6 +26,8 @@ def register(request):
 
         try:
             user = User.objects.create_user(username=email, password=email, email=email)
+            user.save()
+            print(user.username)
 
 
         except:
