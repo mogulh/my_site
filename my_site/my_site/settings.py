@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['mogulh.co.ke']
 INSTALLED_APPS = [
     'clients',
     'blog',
+    'fbchat',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
